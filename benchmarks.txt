@@ -1,0 +1,193 @@
+C:\Users\zero7\AppData\Local\Programs\Python\Python312\python.exe A:\PyToohon\VKR2026\benchmark_inference.py
+GPU: NVIDIA GeForce RTX 4060
+CUDA: 12.8, torch: 2.7.0+cu128
+
+
+========================================================================
+  YOLOv8m  (best.pt)
+========================================================================
+  Файл: 19.4 МБ
+  Параметров: -0.00 M  |  GFLOPs: -1.0
+
+  [1/2] Чистый инференс (640×640, синтетический кадр)...
+        median   :    8.59 ms  →   116.5 FPS
+        mean     :    8.90 ms
+        P95      :   11.25 ms
+        P99      :   16.00 ms
+        VRAM peak: 110 МБ
+
+  [2/2] Видео-пайплайн: VP16.mp4
+        Разрешение      : 1280x720, исходный fps=2.0
+        Обработано      : 60 кадров за 0.7 сек
+        Throughput      : 91.5 FPS
+        Latency median  : 8.12 ms
+        Latency P95     : 9.22 ms
+        ~Effective FPS  : 123.2 FPS
+
+  [2/2] Видео-пайплайн: Video shows intense flames, heavy smoke from Miami abandoned building fire.mp4
+        Разрешение      : 1280x720, исходный fps=30.0
+        Обработано      : 500 кадров за 5.2 сек
+        Throughput      : 96.6 FPS
+        Latency median  : 8.42 ms
+        Latency P95     : 11.39 ms
+        ~Effective FPS  : 118.8 FPS
+
+========================================================================
+  YOLO26m  (best.pt)
+========================================================================
+  Файл: 42.0 МБ
+  Параметров: -0.00 M  |  GFLOPs: -1.0
+
+  [1/2] Чистый инференс (640×640, синтетический кадр)...
+        median   :   13.04 ms  →    76.7 FPS
+        mean     :   13.11 ms
+        P95      :   13.87 ms
+        P99      :   14.41 ms
+        VRAM peak: 192 МБ
+
+  [2/2] Видео-пайплайн: VP16.mp4
+        Разрешение      : 1280x720, исходный fps=2.0
+        Обработано      : 60 кадров за 0.7 сек
+        Throughput      : 85.8 FPS
+        Latency median  : 9.11 ms
+        Latency P95     : 11.24 ms
+        ~Effective FPS  : 109.7 FPS
+
+  [2/2] Видео-пайплайн: Video shows intense flames, heavy smoke from Miami abandoned building fire.mp4
+        Разрешение      : 1280x720, исходный fps=30.0
+        Обработано      : 500 кадров за 5.5 сек
+        Throughput      : 90.6 FPS
+        Latency median  : 9.13 ms
+        Latency P95     : 11.97 ms
+        ~Effective FPS  : 109.6 FPS
+
+========================================================================
+  YOLO26s  (best.pt)
+========================================================================
+  Файл: 19.4 МБ
+  Параметров: -0.00 M  |  GFLOPs: -1.0
+
+  [1/2] Чистый инференс (640×640, синтетический кадр)...
+        median   :    8.36 ms  →   119.6 FPS
+        mean     :    8.58 ms
+        P95      :   10.56 ms
+        P99      :   10.81 ms
+        VRAM peak: 185 МБ
+
+  [2/2] Видео-пайплайн: VP16.mp4
+        Разрешение      : 1280x720, исходный fps=2.0
+        Обработано      : 60 кадров за 0.6 сек
+        Throughput      : 95.3 FPS
+        Latency median  : 8.15 ms
+        Latency P95     : 10.88 ms
+        ~Effective FPS  : 122.7 FPS
+
+  [2/2] Видео-пайплайн: Video shows intense flames, heavy smoke from Miami abandoned building fire.mp4
+        Разрешение      : 1280x720, исходный fps=30.0
+        Обработано      : 500 кадров за 5.0 сек
+        Throughput      : 99.9 FPS
+        Latency median  : 8.11 ms
+        Latency P95     : 10.85 ms
+        ~Effective FPS  : 123.3 FPS
+
+
+CSV сохранён: A:\PyToohon\VKR2026\benchmark_results.csv
+
+
+========================================================================
+  СВОДКА ДЛЯ ПРЕЗЕНТАЦИИ — числа для слайда 5/13
+========================================================================
+  Модель       Params  GFLOPs  FileMB   Pure ms  Pure FPS  Vid FPS   P95 ms
+  YOLOv8m     -0.00M    -1.0    19.4      8.59     116.5     91.5     9.22
+  YOLO26m     -0.00M    -1.0    42.0     13.04      76.7     85.8    11.24
+  YOLO26s     -0.00M    -1.0    19.4      8.36     119.6     95.3    10.88
+
+Process finished with exit code 0
+
+C:\Users\zero7\AppData\Local\Programs\Python\Python312\python.exe A:\PyToohon\VKR2026\benchmark_inference.py
+GPU: NVIDIA GeForce RTX 4060
+CUDA: 12.8, torch: 2.7.0+cu128
+========================================================================
+  YOLOv8m  (best.pt)
+========================================================================
+  Файл: 19.4 МБ
+  Параметров: -0.00 M  |  GFLOPs: -1.0
+  [1/2] Чистый инференс (640×640, синтетический кадр)...
+        median   :    8.59 ms  →   116.5 FPS
+        mean     :    8.90 ms
+        P95      :   11.25 ms
+        P99      :   16.00 ms
+        VRAM peak: 110 МБ
+  [2/2] Видео-пайплайн: VP16.mp4
+        Разрешение      : 1280x720, исходный fps=2.0
+        Обработано      : 60 кадров за 0.7 сек
+        Throughput      : 91.5 FPS
+        Latency median  : 8.12 ms
+        Latency P95     : 9.22 ms
+        ~Effective FPS  : 123.2 FPS
+  [2/2] Видео-пайплайн: Video shows intense flames, heavy smoke from Miami abandoned building fire.mp4
+        Разрешение      : 1280x720, исходный fps=30.0
+        Обработано      : 500 кадров за 5.2 сек
+        Throughput      : 96.6 FPS
+        Latency median  : 8.42 ms
+        Latency P95     : 11.39 ms
+        ~Effective FPS  : 118.8 FPS
+========================================================================
+  YOLO26m  (best.pt)
+========================================================================
+  Файл: 42.0 МБ
+  Параметров: -0.00 M  |  GFLOPs: -1.0
+  [1/2] Чистый инференс (640×640, синтетический кадр)...
+        median   :   13.04 ms  →    76.7 FPS
+        mean     :   13.11 ms
+        P95      :   13.87 ms
+        P99      :   14.41 ms
+        VRAM peak: 192 МБ
+  [2/2] Видео-пайплайн: VP16.mp4
+        Разрешение      : 1280x720, исходный fps=2.0
+        Обработано      : 60 кадров за 0.7 сек
+        Throughput      : 85.8 FPS
+        Latency median  : 9.11 ms
+        Latency P95     : 11.24 ms
+        ~Effective FPS  : 109.7 FPS
+  [2/2] Видео-пайплайн: Video shows intense flames, heavy smoke from Miami abandoned building fire.mp4
+        Разрешение      : 1280x720, исходный fps=30.0
+        Обработано      : 500 кадров за 5.5 сек
+        Throughput      : 90.6 FPS
+        Latency median  : 9.13 ms
+        Latency P95     : 11.97 ms
+        ~Effective FPS  : 109.6 FPS
+========================================================================
+  YOLO26s  (best.pt)
+========================================================================
+  Файл: 19.4 МБ
+  Параметров: -0.00 M  |  GFLOPs: -1.0
+  [1/2] Чистый инференс (640×640, синтетический кадр)...
+        median   :    8.36 ms  →   119.6 FPS
+        mean     :    8.58 ms
+        P95      :   10.56 ms
+        P99      :   10.81 ms
+        VRAM peak: 185 МБ
+  [2/2] Видео-пайплайн: VP16.mp4
+        Разрешение      : 1280x720, исходный fps=2.0
+        Обработано      : 60 кадров за 0.6 сек
+        Throughput      : 95.3 FPS
+        Latency median  : 8.15 ms
+        Latency P95     : 10.88 ms
+        ~Effective FPS  : 122.7 FPS
+  [2/2] Видео-пайплайн: Video shows intense flames, heavy smoke from Miami abandoned building fire.mp4
+        Разрешение      : 1280x720, исходный fps=30.0
+        Обработано      : 500 кадров за 5.0 сек
+        Throughput      : 99.9 FPS
+        Latency median  : 8.11 ms
+        Latency P95     : 10.85 ms
+        ~Effective FPS  : 123.3 FPS
+CSV сохранён: A:\PyToohon\VKR2026\benchmark_results.csv
+========================================================================
+  СВОДКА ДЛЯ ПРЕЗЕНТАЦИИ — числа для слайда 5/13
+========================================================================
+  Модель       Params  GFLOPs  FileMB   Pure ms  Pure FPS  Vid FPS   P95 ms
+  YOLOv8m     -0.00M    -1.0    19.4      8.59     116.5     91.5     9.22
+  YOLO26m     -0.00M    -1.0    42.0     13.04      76.7     85.8    11.24
+  YOLO26s     -0.00M    -1.0    19.4      8.36     119.6     95.3    10.88
+Process finished with exit code 0

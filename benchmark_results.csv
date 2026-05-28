@@ -1,0 +1,7 @@
+model,model_file_mb,params_M,GFLOPs,video,resolution,frames_processed,wall_sec,throughput_fps,latency_median_ms,latency_p95_ms,pure_inference_median_ms,pure_inference_p95_ms,pure_inference_fps,vram_peak_mb
+YOLOv8m,19.4,-0.0,-1,VP16.mp4,1280x720,60,0.66,91.5,8.12,9.22,8.59,11.25,116.5,110.0
+YOLOv8m,19.4,-0.0,-1,"Video shows intense flames, heavy smoke from Miami abandoned building fire.mp4",1280x720,500,5.18,96.57,8.42,11.39,8.59,11.25,116.5,110.0
+YOLO26m,42.0,-0.0,-1,VP16.mp4,1280x720,60,0.7,85.83,9.11,11.24,13.04,13.87,76.7,192.0
+YOLO26m,42.0,-0.0,-1,"Video shows intense flames, heavy smoke from Miami abandoned building fire.mp4",1280x720,500,5.52,90.56,9.13,11.97,13.04,13.87,76.7,192.0
+YOLO26s,19.4,-0.0,-1,VP16.mp4,1280x720,60,0.63,95.33,8.15,10.88,8.36,10.56,119.6,185.0
+YOLO26s,19.4,-0.0,-1,"Video shows intense flames, heavy smoke from Miami abandoned building fire.mp4",1280x720,500,5.0,99.91,8.11,10.85,8.36,10.56,119.6,185.0
