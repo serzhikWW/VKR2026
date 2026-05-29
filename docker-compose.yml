@@ -60,8 +60,12 @@ services:
       MINIO_BUCKET_VIDEOS: videos
       MINIO_BUCKET_RESULTS: results
       REDIS_URL: redis://redis:6379
-      MODEL_PATH: /app/models/best.pt
+      MODEL_PATH: /app/models/yolo26s.pt
       SECRET_KEY: supersecretkey123
+      RTSP_TRANSPORT: tcp
+      MAX_LIVE_STREAMS: 4
+      LIVE_FRAME_SKIP: 2
+      LIVE_JPEG_QUALITY: 75
     ports:
       - "8000:8000"
     volumes:

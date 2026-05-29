@@ -1,6 +1,6 @@
-# 🔥 FireWatch — Система детекции огня и дыма
+# Система детекции огня и дыма
 
-Полноценное веб-приложение для детекции огня и дыма на видеозаписях с использованием YOLOv8.
+Полноценное веб-приложение для детекции огня и дыма на видеозаписях с использованием YOLO26s.
 
 ---
 
@@ -19,7 +19,7 @@
          │            │
 ┌────────▼──┐  ┌──────▼────────┐  ┌──────────────┐
 │ PostgreSQL │  │  Celery Worker│  │    MinIO S3  │
-│  :5432    │  │  (YOLOv8)     │  │   :9000/9001 │
+│  :5432    │  │  (YOLO26s)    │  │   :9000/9001 │
 └───────────┘  └───────────────┘  └──────────────┘
                        │
                ┌───────▼───────┐
@@ -36,7 +36,7 @@
 |-----------|------------|
 | Фронтенд | React 18, Vite, Recharts |
 | Бэкенд | FastAPI, SQLAlchemy async |
-| Детекция | YOLOv8 (ultralytics) + OpenCV |
+| Детекция | YOLO26s (ultralytics) + OpenCV |
 | Очередь задач | Celery + Redis |
 | БД результатов | PostgreSQL 15 |
 | БД видео | MinIO (S3-совместимое) |
@@ -48,11 +48,11 @@
 
 ### 1. Разместите модель
 
-Поместите файл `yolo8m.pt` в папку `backend/models/`:
+Поместите файл `yolo26s.pt` в папку `backend/models/`:
 
 ```bash
 mkdir -p backend/models
-cp /path/to/yolo8m.pt backend/models/
+cp /path/to/yolo26s.pt backend/models/
 ```
 
 > **Без модели** — приложение запустится в **демо-режиме** с имитацией детекций.
@@ -95,7 +95,7 @@ docker compose up --build
 ## Структура проекта
 
 ```
-fire-detection/
+VKR2026/
 ├── docker-compose.yml
 ├── backend/
 │   ├── Dockerfile
@@ -116,7 +116,7 @@ fire-detection/
 │       │   ├── detections.py    # REST API детекций
 │       │   └── websocket.py     # WebSocket прогресс
 │       └── services/
-│           ├── detection_service.py  # YOLOv8 обработка
+│           ├── detection_service.py  # YOLO обработка
 │           └── storage_service.py   # MinIO операции
 ├── frontend/
 │   ├── Dockerfile
@@ -168,7 +168,7 @@ fire-detection/
 Переменные окружения (`.env` или `docker-compose.yml`):
 
 ```env
-MODEL_PATH=/app/models/yolo8m.pt
+MODEL_PATH=/app/models/yolo26s.pt
 CONFIDENCE_THRESHOLD=0.25   # Порог уверенности
 IOU_THRESHOLD=0.45           # IoU для NMS
 FRAME_SKIP=2                 # Обрабатывать каждый N-й кадр

@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { Outlet, NavLink, useLocation } from 'react-router-dom'
-import { LayoutDashboard, Upload, Film, Menu, X, Flame, Shield } from 'lucide-react'
+import { LayoutDashboard, Upload, Film, Menu, X, Flame, Shield, Radio } from 'lucide-react'
 import styles from './Layout.module.css'
 
 const NAV = [
   { to: '/', icon: LayoutDashboard, label: 'Дашборд', exact: true },
   { to: '/upload', icon: Upload, label: 'Загрузка видео' },
+  { to: '/live', icon: Radio, label: 'Live трансляция' },
   { to: '/videos', icon: Film, label: 'Архив видео' },
 ]
 
@@ -69,6 +70,7 @@ export default function Layout() {
               {location.pathname === '/' ? 'ДАШБОРД' :
                location.pathname.startsWith('/videos/') ? 'АНАЛИЗ ВИДЕО' :
                location.pathname === '/upload' ? 'ЗАГРУЗКА' :
+               location.pathname === '/live' ? 'LIVE ТРАНСЛЯЦИЯ' :
                location.pathname === '/videos' ? 'АРХИВ' : ''}
             </span>
           </div>

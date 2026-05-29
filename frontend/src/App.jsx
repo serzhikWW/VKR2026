@@ -6,6 +6,7 @@ import Dashboard from './pages/Dashboard.jsx'
 import Upload from './pages/Upload.jsx'
 import VideoDetail from './pages/VideoDetail.jsx'
 import VideoList from './pages/VideoList.jsx'
+import LiveStream from './pages/LiveStream.jsx'
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
           <Route path="upload" element={<Upload />} />
+          <Route path="live" element={<LiveStream />} />
           <Route path="videos" element={<VideoList />} />
           <Route path="videos/:id" element={<VideoDetail />} />
         </Route>

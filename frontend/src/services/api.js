@@ -38,11 +38,30 @@ export const getDetectionSummary = (videoId) =>
 export const getOverviewStats = () =>
   api.get('/api/detections/stats/overview')
 
+// Live RTSP Streams
+export const createStream = (rtsp_url, name = null) =>
+  api.post('/api/streams/', { rtsp_url, name })
+
+export const listStreams = () => api.get('/api/streams/')
+
+export const getStream = (id) => api.get(`/api/streams/${id}`)
+
+export const stopStream = (id) => api.post(`/api/streams/${id}/stop`)
+
+export const deleteStream = (id) => api.delete(`/api/streams/${id}`)
+
+export const getStreamMjpegUrl = (id) =>
+  `${API_BASE}/api/streams/${id}/mjpeg`
+
 // WebSocket
 export const WS_BASE = (import.meta.env.VITE_WS_URL || 'ws://localhost:8000')
 
 export const createProgressWS = (videoId) => {
   return new WebSocket(`${WS_BASE}/ws/progress/${videoId}`)
+}
+
+export const createStreamStatsWS = (streamId) => {
+  return new WebSocket(`${WS_BASE}/ws/streams/${streamId}`)
 }
 
 export default api

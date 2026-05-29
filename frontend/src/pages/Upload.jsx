@@ -129,7 +129,7 @@ export default function UploadPage() {
           <span className={styles.titleAccent}>ЗАГРУЗКА</span> ВИДЕО
         </h1>
         <p className={styles.subtitle}>
-          Система автоматически обнаружит огонь и дым с помощью YOLOv8
+          Система автоматически обнаружит огонь и дым с помощью YOLO
         </p>
       </div>
 
@@ -272,7 +272,7 @@ export default function UploadPage() {
       {/* Instructions */}
       <div className={styles.infoGrid}>
         <InfoCard icon={Upload} title="1. Загрузка" text="Перетащите видеофайл в область загрузки или нажмите для выбора." />
-        <InfoCard icon={Flame} title="2. Детекция" text="YOLOv8 анализирует каждый кадр и обнаруживает огонь и дым в реальном времени." />
+        <InfoCard icon={Flame} title="2. Детекция" text="YOLO анализирует каждый кадр и обнаруживает огонь и дым в реальном времени." />
         <InfoCard icon={Film} title="3. Результат" text="Получите аннотированное видео и подробную статистику детекций." />
       </div>
     </div>

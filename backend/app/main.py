@@ -4,7 +4,8 @@ from contextlib import asynccontextmanager
 
 from app.core.database import engine, Base
 from app.core.minio_client import init_minio
-from app.api import videos, detections, websocket
+from app.api import videos, detections, websocket, streams
+from app.services.stream_service import stream_manager
 import logging
 
 logging.basicConfig(level=logging.INFO)
@@ -20,6 +21,10 @@ async def lifespan(app: FastAPI):
     logger.info("Startup complete.")
     yield
     logger.info("Shutting down...")
+    try:
+        stream_manager.shutdown_all()
+    except Exception as e:
+        logger.error(f"Stream manager shutdown error: {e}")
     await engine.dispose()
 
 
@@ -43,6 +48,7 @@ app.add_middleware(
 
 app.include_router(videos.router, prefix="/api/videos", tags=["videos"])
 app.include_router(detections.router, prefix="/api/detections", tags=["detections"])
+app.include_router(streams.router, prefix="/api/streams", tags=["streams"])
 app.include_router(websocket.router, prefix="/ws", tags=["websocket"])
 
 

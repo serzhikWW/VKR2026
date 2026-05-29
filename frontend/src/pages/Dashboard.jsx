@@ -53,7 +53,7 @@ export default function Dashboard() {
         <h1 className={styles.pageTitle}>
           <span className={styles.titleAccent}>СИСТЕМА</span> МОНИТОРИНГА
         </h1>
-        <p className={styles.pageSubtitle}>Детекция огня и дыма — YOLOv8</p>
+        <p className={styles.pageSubtitle}>Детекция огня и дыма — YOLO</p>
       </div>
 
       {/* Stats Grid */}
