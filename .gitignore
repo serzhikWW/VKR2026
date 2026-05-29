@@ -1,0 +1,8 @@
+.venv/
+.idea/
+VKR_utils/
+videos/
+mediamtx_v1.17.1_darwin_amd64/
+__pycache__/
+*.pyc
+.DS_Store
